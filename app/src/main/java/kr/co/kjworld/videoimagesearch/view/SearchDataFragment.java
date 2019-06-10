@@ -1,4 +1,4 @@
-package kr.co.kjworld.videoimagesearch.View;
+package kr.co.kjworld.videoimagesearch.view;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import kr.co.kjworld.videoimagesearch.R;
-import kr.co.kjworld.videoimagesearch.View.adapter.ImageSearchAdapter;
+import kr.co.kjworld.videoimagesearch.data.response.data.Document;
+import kr.co.kjworld.videoimagesearch.view.adapter.ImageSearchAdapter;
 import kr.co.kjworld.videoimagesearch.data.response.KakoSearchService;
 import kr.co.kjworld.videoimagesearch.data.network.RetrofitCreator;
-import kr.co.kjworld.videoimagesearch.data.response.data.ImageDocument;
 
 public class SearchDataFragment extends Fragment {
 
@@ -46,7 +46,7 @@ public class SearchDataFragment extends Fragment {
         recyclerView = view.findViewById(R.id.search_listView);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context, 3);
         recyclerView.setLayoutManager(layoutManager);
-        final ImageSearchAdapter adapter = new ImageSearchAdapter(context, new ArrayList<ImageDocument>());
+        final ImageSearchAdapter adapter = new ImageSearchAdapter(context, new ArrayList<Document>());
         recyclerView.setAdapter(adapter);
 
 
@@ -55,6 +55,7 @@ public class SearchDataFragment extends Fragment {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(item -> adapter.updateImageAdapter(item));
+
 
         RetrofitCreator.getInstance().create(KakoSearchService.class)
                 .getVideoData("KakaoAK f3a3676ce605a55fa482f111aa67e2b4", "설현", "recency", 1, 10)

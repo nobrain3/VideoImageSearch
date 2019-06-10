@@ -24,8 +24,8 @@ public class KakaoVideoDataDeserializer implements JsonDeserializer<VideoData> {
         {
             VideoDocument document = new VideoDocument();
             JsonObject ownerJsonObject = documentArray.get(i).getAsJsonObject();
-            document.url = ownerJsonObject.get("url").getAsString();
-            document.datetime = ownerJsonObject.get("datetime").getAsString();
+            document.url= ownerJsonObject.get("url").getAsString();
+            document.dateTime = ownerJsonObject.get("datetime").getAsString();
             document.thumbnail = ownerJsonObject.get("thumbnail").getAsString();
             document.play_time = ownerJsonObject.get("play_time").getAsInt();
             videoData.documents.add(document);

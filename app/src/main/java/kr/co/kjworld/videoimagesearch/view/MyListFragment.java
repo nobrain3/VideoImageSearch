@@ -1,4 +1,4 @@
-package kr.co.kjworld.videoimagesearch.View;
+package kr.co.kjworld.videoimagesearch.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

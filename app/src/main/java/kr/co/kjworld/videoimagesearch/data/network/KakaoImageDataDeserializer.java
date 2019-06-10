@@ -27,7 +27,7 @@ public class KakaoImageDataDeserializer implements JsonDeserializer<ImageData> {
             JsonObject ownerJsonObject = documentArray.get(i).getAsJsonObject();
             document.image_url = ownerJsonObject.get("image_url").getAsString();
             document.thumbnail_url = ownerJsonObject.get("thumbnail_url").getAsString();
-            document.datetime = ownerJsonObject.get("datetime").getAsString();
+            document.dateTime = ownerJsonObject.get("datetime").getAsString();
             imageData.documents.add(document);
         }
 

@@ -1,10 +1,8 @@
 package kr.co.kjworld.videoimagesearch.data.response.data;
 
-public class VideoDocument{
+public class Document {
     public String url;
-    public String thumbnail;
+    public String thumbnail_url;
     public String dateTime;
     public int play_time;
-    public String author;
-    public String title;
 }

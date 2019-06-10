@@ -1,4 +1,4 @@
-package kr.co.kjworld.videoimagesearch.View.adapter;
+package kr.co.kjworld.videoimagesearch.view.adapter;
 
 import android.content.Context;
 
@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import kr.co.kjworld.videoimagesearch.R;
-import kr.co.kjworld.videoimagesearch.View.MyListFragment;
-import kr.co.kjworld.videoimagesearch.View.SearchDataFragment;
+import kr.co.kjworld.videoimagesearch.view.MyListFragment;
+import kr.co.kjworld.videoimagesearch.view.SearchDataFragment;
 
 public class ContentsPagerAdapter extends FragmentPagerAdapter {
     private int pageCount;

@@ -3,7 +3,7 @@ package kr.co.kjworld.videoimagesearch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-import kr.co.kjworld.videoimagesearch.View.adapter.ContentsPagerAdapter;
+import kr.co.kjworld.videoimagesearch.view.adapter.ContentsPagerAdapter;
 
 import android.os.Bundle;
 import android.view.Menu;
